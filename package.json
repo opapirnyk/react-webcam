@@ -1,29 +1,27 @@
 {
-  "name": "react-webcam",
-  "version": "1.0.4",
+  "name": "react-webcam-fixed",
+  "version": "1.0.6",
   "description": "React webcam component",
   "main": "dist/react-webcam.js",
   "scripts": {
-    "prepublish": "npm run build:umd",
     "build": "webpack src/react-webcam.js dist/react-webcam.js",
-    "build:umd": "npm run build && NODE_ENV=production webpack src/react-webcam.js dist/react-webcam.min.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mozmorris/react-webcam.git"
+    "url": "git+https://github.com/opapirnyk/react-webcam.git"
   },
   "keywords": [
     "react",
     "react-component",
     "webcam"
   ],
-  "author": "Moz Morris <mozmorris@gmail.com>",
+  "author": "Oleh Papirnyk <olegpapirnyk@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mozmorris/react-webcam/issues"
+    "url": "https://github.com/opapirnyk/react-webcam/issues"
   },
-  "homepage": "https://github.com/mozmorris/react-webcam",
+  "homepage": "https://github.com/opapirnyk/react-webcam",
   "peerDependencies": {
     "react": ">=15.3.0",
     "react-dom": ">=15.3.0"
@@ -48,5 +46,8 @@
   },
   "dependencies": {
     "prop-types": "^15.5.8"
+  },
+  "directories": {
+    "example": "examples"
   }
 }

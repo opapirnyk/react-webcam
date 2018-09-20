@@ -23,7 +23,7 @@ https://codepen.io/mozmorris/pen/JLZdoP
 
 ```javascript
 import React from "react";
-import Webcam from "react-webcam";
+import Webcam from "react-webcam-fixed";
 
 class Component extends React.Component {
   render() {
