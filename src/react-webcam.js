@@ -170,10 +170,12 @@ export default class Webcam extends Component {
       const canvas = document.createElement('canvas');
       const aspectRatio = this.video.videoWidth / this.video.videoHeight;
 
-      var canvasWidth = this.props.minScreenshotWidth || this.video.clientWidth;
-      var canvasHeight = canvasWidth / aspectRatio;
+      let canvasWidth = this.props.minScreenshotWidth
+        && this.video.clientWidth < this.props.minScreenshotWidth ?
+        this.props.minScreenshotWidth : this.video.clientWidth;
+      let canvasHeight = canvasWidth / aspectRatio;
 
-      if (this.props.minScreenshotHeight && (canvasHeight < this.props.minScreenshotHeight)) {
+      if (this.props.minScreenshotHeight && canvasHeight < this.props.minScreenshotHeight) {
         canvasHeight = this.props.minScreenshotHeight;
         canvasWidth = canvasHeight * aspectRatio;
       }
